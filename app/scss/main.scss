@@ -1,0 +1,40 @@
+@import "./vars";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: $font;
+}
+
+img{
+    position: absolute;
+    width: 100%;
+    pointer-events: none;
+}
+
+.desk-img{
+    display: none;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: $Red;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    z-index: 999;
+}
+
+.text-container{
+    color: #fff;
+}
