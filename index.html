@@ -7,9 +7,11 @@
   <title>login</title>
   <link rel="stylesheet" href="./app/scss/main.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-  <img src="./images/bg-intro-mobile.png" alt="" class="mob-img">
+  <div class="wrapper">
+    <img src="./images/bg-intro-mobile.png" alt="" class="mob-img">
   <img src="./images/bg-intro-desktop.png" alt="" class="desk-img">
 
   <main>
@@ -27,19 +29,42 @@
       </div>
 
       <div class="form-inner-container">
-        <form action="">
-          <input type="text" placeholder="First Name">
-          <input type="text" placeholder="Last Name">
-          <input type="text" placeholder="Email Address">
-          <input type="text" placeholder="Password">
+        <form novalidate>
+          <div class="input">
+            <input type="text" placeholder="First Name" class="fname-field" required>
+            <i class="fas fa-exclamation-circle"></i>
+            <span>First Name cannot be empty</span>
+          </div>
+
+          <div class="input">
+            <input type="text" placeholder="Last Name" class="lname-field" required>
+            <i class="fas fa-exclamation-circle"></i>
+            <span>Last Name cannot be empty</span>
+          </div>
+
+          <div class="input">
+            <input type="email" placeholder="Email Address" class="email-field" required>
+            <i class="fas fa-exclamation-circle"></i>
+            <span>Looks like this is not an email</span>
+          </div>
+
+          <div class="input pass">
+            <input type="password" placeholder="Password" class="password-field" minlength="7" required>
+            <span>Password cannot be empty</span>
+            <span>Password has to be at least 7 characters</span>
+            <i class="fas fa-eye-slash switch-pass"></i>
+          </div>
+
           <button>CLAIM YOUR FREE TRIAL</button>
         </form>
         <p>By clicking the button, you are agreeing to 
-          our <span>Terms and Services</span>
+          our <a href="#">Terms and Services</a>
         </p>
       </div>
     </section>
   </main>
+  </div>
+  
   <script src="./app/js/script.js"></script>
 </body>
 </html>

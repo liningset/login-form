@@ -15,22 +15,28 @@ img {
   pointer-events: none;
 }
 
+h1 {
+  font-size: 1.75rem;
+  font-weight: 800;
+}
+
 .desk-img {
   display: none;
 }
 
-body {
+.wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 100vh;
   background: #ff7a7a;
+  overflow: hidden;
 }
 
 main {
@@ -41,11 +47,275 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 2rem;
   width: 90%;
   z-index: 999;
+  margin: 4rem 0;
 }
 
 .text-container {
   color: #fff;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.text-container p {
+  font-weight: 400;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.form-container .form-heading {
+  background: #6055a5;
+  color: #fff;
+  font-weight: 400;
+  font-size: 0.9rem;
+  border-radius: 0.5rem;
+  padding: 1rem 4rem;
+  -webkit-box-shadow: 0 10px 0 rgba(43, 43, 43, 0.3);
+          box-shadow: 0 10px 0 rgba(43, 43, 43, 0.3);
+  text-align: center;
+}
+
+.form-container .form-heading span {
+  font-weight: 700;
+}
+
+.form-container .form-inner-container {
+  padding: 2rem;
+  border-radius: 0.5rem;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  -webkit-box-shadow: 0 10px 0 rgba(43, 43, 43, 0.3);
+          box-shadow: 0 10px 0 rgba(43, 43, 43, 0.3);
+}
+
+.form-container .form-inner-container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1em;
+}
+
+.form-container .form-inner-container form input, .form-container .form-inner-container form button {
+  font-family: inherit;
+  padding: 0 1em;
+  font-weight: 700;
+  border-radius: 5px;
+  height: 4rem;
+}
+
+.form-container .form-inner-container form .input {
+  position: relative;
+  color: #353b3d;
+}
+
+.form-container .form-inner-container form .input input {
+  color: inherit;
+  border: 1px solid #aebcc0;
+  outline: 1px solid transparent;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  width: 100%;
+  font-size: 1rem;
+  background: #fff;
+}
+
+.form-container .form-inner-container form .input input:focus {
+  outline: 1px solid #4b5153;
+  border: 1px solid #4b5153;
+}
+
+.form-container .form-inner-container form .input input::-webkit-input-placeholder {
+  color: currentColor;
+}
+
+.form-container .form-inner-container form .input input:-ms-input-placeholder {
+  color: currentColor;
+}
+
+.form-container .form-inner-container form .input input::-ms-input-placeholder {
+  color: currentColor;
+}
+
+.form-container .form-inner-container form .input input::placeholder {
+  color: currentColor;
+}
+
+.form-container .form-inner-container form .input i {
+  display: none;
+  pointer-events: none;
+  color: inherit;
+}
+
+.form-container .form-inner-container form .input i.switch-pass {
+  display: block;
+  pointer-events: auto;
+  position: absolute;
+  right: 3px;
+  padding: 0 1rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.form-container .form-inner-container form .input span {
+  text-align: right;
+  font-weight: 500;
+  display: none;
+  font-size: 0.75rem;
+  color: #ff7a7a;
+}
+
+.form-container .form-inner-container form .error input {
+  border: 2px solid #ff7a7a;
+  color: #ff7a7a;
+}
+
+.form-container .form-inner-container form .error input:focus {
+  outline: none;
+  border: 2px solid #ff7a7a;
+}
+
+.form-container .form-inner-container form .error input::-webkit-input-placeholder {
+  opacity: 1;
+  color: currentColor;
+}
+
+.form-container .form-inner-container form .error input:-ms-input-placeholder {
+  opacity: 1;
+  color: currentColor;
+}
+
+.form-container .form-inner-container form .error input::-ms-input-placeholder {
+  opacity: 1;
+  color: currentColor;
+}
+
+.form-container .form-inner-container form .error input::placeholder {
+  opacity: 1;
+  color: currentColor;
+}
+
+.form-container .form-inner-container form .error.pass i {
+  top: 27.5%;
+}
+
+.form-container .form-inner-container form .error i {
+  position: absolute;
+  color: #ff7a7a;
+  top: 35%;
+  -webkit-transform: translateY(-35%);
+          transform: translateY(-35%);
+  right: 3px;
+  display: block;
+  background: #fff;
+  padding: 0 1rem;
+}
+
+.form-container .form-inner-container form .error i.switch-pass {
+  color: #ff7a7a;
+}
+
+.form-container .form-inner-container form .error span {
+  display: block;
+}
+
+.form-container .form-inner-container form button {
+  font-weight: 400;
+  background: #38cc8c;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  color: #fff;
+  border: none;
+  -webkit-box-shadow: 0 5px 0 #299968;
+          box-shadow: 0 5px 0 #299968;
+  font-size: 1rem;
+}
+
+.form-container .form-inner-container form button:hover {
+  opacity: 0.7;
+}
+
+.form-container .form-inner-container p {
+  color: #888686;
+  font-size: .85rem;
+  text-align: center;
+}
+
+.form-container .form-inner-container p a {
+  color: #ff7a7a;
+  font-weight: 700;
+}
+
+@media (min-width: 900px) {
+  .desk-img {
+    display: block;
+  }
+  .mob-img {
+    display: none;
+  }
+  h1 {
+    font-size: 2.25rem;
+  }
+  .text-container {
+    text-align: left;
+  }
+  .wrapper {
+    min-height: 100vh;
+  }
+  main {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 80%;
+    margin: 0;
+  }
+  main > * {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .form-container .form-inner-container form input, .form-container .form-inner-container form button {
+    height: 3rem;
+  }
+  .form-container .form-inner-container form .error i, .form-container .form-inner-container form .error .switch-pass {
+    padding: 0 0.75rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */
