@@ -141,7 +141,7 @@ main {
 
 .form-container .form-inner-container form .input input {
   color: inherit;
-  border: 1px solid #aebcc0;
+  border: 1px solid rgba(96, 85, 165, 0.3);
   outline: 1px solid transparent;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
@@ -151,8 +151,8 @@ main {
 }
 
 .form-container .form-inner-container form .input input:focus {
-  outline: 1px solid #4b5153;
-  border: 1px solid #4b5153;
+  outline: 1px solid #6055a5;
+  border: 1px solid #6055a5;
 }
 
 .form-container .form-inner-container form .input input::-webkit-input-placeholder {
